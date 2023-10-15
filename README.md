@@ -2,8 +2,8 @@
 This project was carried out as part of the TC department program, INSA Lyon. The goal of the project is to design an OFDM transmitter and a receiver using Simulink, with the use of pilot symbols, cyclic prefix and a multipath channel.
 
 Constraints:
-1, Bandwidth: B = 20 MHz;
-2, Environment: In order to introduce multipath channel, we assume that the lastest echo received arrives with a delay of 500 ns (*max delay*) compared to the main path. This correspond to a very dense indoor or outdoor environment;
+1, Bandwidth: B = 20 MHz;<br />
+2, Environment: In order to introduce multipath channel, we assume that the lastest echo received arrives with a delay of 500 ns (*max delay*) compared to the main path. This correspond to a very dense indoor or outdoor environment;<br />
 3, Maximum Doppler shift: 100 Hz
 
 The transmission being carried out on a multipath channel introducing echoes and delays upon reception, to have a flat fading allowing a constant channel response on a frequency band, the subband width W must respect the following condition: W << 1/*max delay*. For this reason, we chose W = 0.2 MHz.
@@ -39,20 +39,20 @@ The final model is in file Projet_PSC.slx.
 
 
 ## Receiver
-*First part*
+*First part*<br />
 ![My Image](Receiver-1.png)
-*Second part (Equalization)*
+*Second part (Equalization)*<br />
 ![My Image](Receiver-2.png)
-*Third part*
+*Third part*<br />
 ![My Image](Receiver-3.png)
 
 
 ## Channel
-A Rayleigh bloc is used for the channel:
+A Rayleigh bloc is used for the channel:<br />
 ![My Image](Rayleigh-bloc.png)
 
-With the configuration below:
-![My Image](Rayleigh-channel.png)
+With the configuration below:<br />
+![My Image](Rayleigh-channel.png)<br />
 
 The synchronization was carried out in a different project, where we measured the BER with different rates of pilot, IFFT sizes and SNR values.
 
