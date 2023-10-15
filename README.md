@@ -17,6 +17,8 @@ Te = Tofdm/(Npc+Ntot) = 35 ns
 
 The number of cyclic prefix must follow the condition: Npc*Te = *max delay* => Npc = 14 samples
 
+|Parameter | Value |
+| --- | --- |
 | Number of samples at IFFT block input (Ntot) | 128 | 
 | Number of subbands (N) | 100 |
 | Subband width (W) | 0.2 MHz  |
@@ -30,29 +32,29 @@ The number of cyclic prefix must follow the condition: Npc*Te = *max delay* => N
 The final model is in file Projet_PSC.slx.
 
 ## Transmitter
-![My Remote Image](https://www.dropbox.com/scl/fi/nkr7e45kbjtcljxscgscf/Transmitter.png?rlkey=dhmurk3edrb0ek5ljpkvbl05i&dl=0)
+![My Remote Image](Transmitter.png)
 
 ###  Pilot adding principle using Simulink blocs
-![My Remote Image](https://www.dropbox.com/scl/fi/k6gwsu2vimjptqgmru0i6/Pilot-adding.png?rlkey=z9a1ousjv9slmzseozcm6keb2&dl=0)
+![My Remote Image](Pilot-adding.png)
 
 
 ## Receiver
 *First part*
-![My Remote Image](https://www.dropbox.com/scl/fi/wqmvleu9apjuokmfkpjf8/Receiver-1.png?rlkey=nb42q7o1g5gqhy62irp1xqqqg&dl=0)
+![My Remote Image](Receiver-1.png)
 *Second part (Equalization)*
-![My Remote Image](https://www.dropbox.com/scl/fi/4q01i2q1pqlk4ahg72bhz/Receiver-2.png?rlkey=sv6wkua9imdqrh1th6quv4l03&dl=0)
+![My Remote Image](Receiver-2.png)
 *Third part*
-![My Remote Image](https://www.dropbox.com/scl/fi/c9c6wt1dapgc8725f3xcl/Receiver-3.png?rlkey=2pixlx6x3aqflnnoaw4nsd7aj&dl=0)
+![My Remote Image](Receiver-3.png)
 
 
 ## Channel
 A Rayleigh bloc is used for the channel:
-![My Remote Image](https://www.dropbox.com/scl/fi/aco2zuhih7t1nzd445se5/Rayleigh-bloc.png?rlkey=ttk9cabsut709l8koajfmdx23&dl=0)
+![My Remote Image](Rayleigh-bloc.png)
 
 With the configuration below:
-![My Remote Image](https://www.dropbox.com/scl/fi/lgia0cip2unrn4551w6zn/Rayleigh-channel.png?rlkey=22gt5fb72fe7df5d8btuhg7rm&dl=0)
+![My Remote Image](Rayleigh-channel.png)
 
-The synchronization is carried out in a different project, where we measured the BER with different rates of pilot, IFFT sizes and SNR values.
+The synchronization was carried out in a different project, where we measured the BER with different rates of pilot, IFFT sizes and SNR values.
 
 
 
