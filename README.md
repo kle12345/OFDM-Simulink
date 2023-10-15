@@ -1,9 +1,9 @@
 # OFDM simulation using Simulink
-This project was carried out as part of the program of the TC department, Insa Lyon. The goal of the project is to design an OFDM transmitter and a receiver using Simulink, with the use of pilot symbols, cyclic prefix and a multipath channel.
+This project was carried out as part of the TC department program, INSA Lyon. The goal of the project is to design an OFDM transmitter and a receiver using Simulink, with the use of pilot symbols, cyclic prefix and a multipath channel.
 
 Constraints:
-1, Bandwidth: B = 20 MHz
-2, Environment: In order to introduce multipath channel, we assume that the lastest echo received arrives with a delay of 500 ns (*max delay*) compared to the main path. This correspond to a very dense indoor or outdoor environment.
+1, Bandwidth: B = 20 MHz;
+2, Environment: In order to introduce multipath channel, we assume that the lastest echo received arrives with a delay of 500 ns (*max delay*) compared to the main path. This correspond to a very dense indoor or outdoor environment;
 3, Maximum Doppler shift: 100 Hz
 
 The transmission being carried out on a multipath channel introducing echoes and delays upon reception, to have a flat fading allowing a constant channel response on a frequency band, the subband width W must respect the following condition: W << 1/*max delay*. For this reason, we chose W = 0.2 MHz.
@@ -30,27 +30,27 @@ The number of cyclic prefix must follow the condition: Npc*Te = *max delay* => N
 The final model is in file Projet_PSC.slx.
 
 ## Transmitter
-![My Remote Image](https://keep.google.com/u/0/media/v2/17fJ-nr0MzMPeWkl9qpDk-Z2E1uSJr_matWCSkz6YVgEDGqAbYAbxBmoOEelMStg/1Yg5GZZUPRt6Tji3yPuyo9P4BwtSvbh_QDNSms7c6P2_it1UxrNc9QqEvMsuG2g?sz=512&accept=image%2Fgif%2Cimage%2Fjpeg%2Cimage%2Fjpg%2Cimage%2Fpng%2Cimage%2Fwebp)
+![My Remote Image](https://www.dropbox.com/scl/fi/nkr7e45kbjtcljxscgscf/Transmitter.png?rlkey=dhmurk3edrb0ek5ljpkvbl05i&dl=0)
 
 ###  Pilot adding principle using Simulink blocs
-![My Remote Image](https://keep.google.com/u/0/media/v2/1MnIbOqQ0GvTcn9oh_X_-LKNnAggSHUOuQNO7PZeh9TVO5CbZ4dXhcLF8Gnvdxpg/11_15NHcg7uQKanIo1cY7SIFXsAXHEop5zSm8R515VUDmzkXEVf1QjUigRdlVlBE?sz=512&accept=image%2Fgif%2Cimage%2Fjpeg%2Cimage%2Fjpg%2Cimage%2Fpng%2Cimage%2Fwebp)
+![My Remote Image](https://www.dropbox.com/scl/fi/k6gwsu2vimjptqgmru0i6/Pilot-adding.png?rlkey=z9a1ousjv9slmzseozcm6keb2&dl=0)
 
 
 ## Receiver
 *First part*
-![My Remote Image](https://keep.google.com/u/0/media/v2/1K-FQ5P7QcsvnEGcMHQSxYO2IiLtAuqluYGckfbwXu1lszhFghqvKQFZJ6XxrEcw/1P3RLW8XJGkSXI2-vEjE-tFInf2EWvxhEsqyT6uZ6vTqho9PZg3hGKkOBYVX_r0c?sz=512&accept=image%2Fgif%2Cimage%2Fjpeg%2Cimage%2Fjpg%2Cimage%2Fpng%2Cimage%2Fwebp)
+![My Remote Image](https://www.dropbox.com/scl/fi/wqmvleu9apjuokmfkpjf8/Receiver-1.png?rlkey=nb42q7o1g5gqhy62irp1xqqqg&dl=0)
 *Second part (Equalization)*
-![My Remote Image](https://keep.google.com/u/0/media/v2/1e4vaX3xeOYWYjdyN7Q9owXYERNIlTTAyn_LbrOpzFOkHPRveyfG4HOoy3w0w7g/1rvm1FWQOleaiCb9saW2-dSBaSXXfE_jU82qtDQCpJJYZ6xrITvbZQMnAi_RsJQ?sz=512&accept=image%2Fgif%2Cimage%2Fjpeg%2Cimage%2Fjpg%2Cimage%2Fpng%2Cimage%2Fwebp)
+![My Remote Image](https://www.dropbox.com/scl/fi/4q01i2q1pqlk4ahg72bhz/Receiver-2.png?rlkey=sv6wkua9imdqrh1th6quv4l03&dl=0)
 *Third part*
-![My Remote Image](https://keep.google.com/u/0/media/v2/12KeRql-2yIwMsZpemMdYe1b3cgXcJItAfq0jWTTYDEWdzrmBUVV7cLrxpp0gvg/10VOwyx04WZQqFNAp_V7BOTLaCe7Jk2dyoVvT2or1ohnZ_Eyr3VuRwWHqG9h9fbw?sz=512&accept=image%2Fgif%2Cimage%2Fjpeg%2Cimage%2Fjpg%2Cimage%2Fpng%2Cimage%2Fwebp)
+![My Remote Image](https://www.dropbox.com/scl/fi/c9c6wt1dapgc8725f3xcl/Receiver-3.png?rlkey=2pixlx6x3aqflnnoaw4nsd7aj&dl=0)
 
 
 ## Channel
 A Rayleigh bloc is used for the channel:
-![My Remote Image](https://keep.google.com/u/0/media/v2/1UUs_ZbNYJ1hr9XlyEuFoGtB6rIV4g3evtMXPm0YbVzPVR0aFawdEpmEI1M_Z3qM/18woDVdBQeA5BfsAMut1tEzXS3d8kk-ruurMQpGD_D6TbqWicWD9eM2zcokD0gw?sz=512&accept=image%2Fgif%2Cimage%2Fjpeg%2Cimage%2Fjpg%2Cimage%2Fpng%2Cimage%2Fwebp)
+![My Remote Image](https://www.dropbox.com/scl/fi/aco2zuhih7t1nzd445se5/Rayleigh-bloc.png?rlkey=ttk9cabsut709l8koajfmdx23&dl=0)
 
 With the configuration below:
-![My Remote Image](https://keep.google.com/u/0/media/v2/1y5PfyRtRvB7B4mLCKAvxY6xwz0pTTATO_P6LMhjYUha6K2bPdiXVF_NTvl8_k30/1A9cVmGSACm78P0qY-L-FiSdepTjgb710Kl5JbCTUiESC5gl2gr7myXsD9e7VMA?sz=512&accept=image%2Fgif%2Cimage%2Fjpeg%2Cimage%2Fjpg%2Cimage%2Fpng%2Cimage%2Fwebp)
+![My Remote Image](https://www.dropbox.com/scl/fi/lgia0cip2unrn4551w6zn/Rayleigh-channel.png?rlkey=22gt5fb72fe7df5d8btuhg7rm&dl=0)
 
 The synchronization is carried out in a different project, where we measured the BER with different rates of pilot, IFFT sizes and SNR values.
 
