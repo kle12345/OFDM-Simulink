@@ -32,27 +32,27 @@ The number of cyclic prefix must follow the condition: Npc*Te = *max delay* => N
 The final model is in file Projet_PSC.slx.
 
 ## Transmitter
-![My Remote Image](Transmitter.png)
+![My Image](Transmitter.png)
 
 ###  Pilot adding principle using Simulink blocs
-![My Remote Image](Pilot-adding.png)
+![My Image](Pilot-adding.png)
 
 
 ## Receiver
 *First part*
-![My Remote Image](Receiver-1.png)
+![My Image](Receiver-1.png)
 *Second part (Equalization)*
-![My Remote Image](Receiver-2.png)
+![My Image](Receiver-2.png)
 *Third part*
-![My Remote Image](Receiver-3.png)
+![My Image](Receiver-3.png)
 
 
 ## Channel
 A Rayleigh bloc is used for the channel:
-![My Remote Image](Rayleigh-bloc.png)
+![My Image](Rayleigh-bloc.png)
 
 With the configuration below:
-![My Remote Image](Rayleigh-channel.png)
+![My Image](Rayleigh-channel.png)
 
 The synchronization was carried out in a different project, where we measured the BER with different rates of pilot, IFFT sizes and SNR values.
 
