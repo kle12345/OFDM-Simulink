@@ -40,11 +40,11 @@ The final model is in file Projet_PSC.slx.
 
 ## Receiver
 *First part*<br />
-![My Image](Receiver-1.png)
+![My Image](Receiver-1.png)<br />
 *Second part (Equalization)*<br />
-![My Image](Receiver-2.png)
+![My Image](Receiver-2.png)<br />
 *Third part*<br />
-![My Image](Receiver-3.png)
+![My Image](Receiver-3.png)<br />
 
 
 ## Channel
